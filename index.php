@@ -68,7 +68,7 @@
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item active">
               <a class="nav-link" href="#">
-                <?=isset($_SESSION['user'])? $_SESSION['user'] : (isset($_SESSION['msg'])? $_SESSION['msg'] :"Nem vagy bejelentkeztel!")?>
+                <?=isset($_SESSION['user'])? $_SESSION['user'] : (isset($_SESSION['msg'])? $_SESSION['msg'] :"Nem vagy bejelentkezve!")?>
                 <span class="sr-only">(current)</span>
               </a>
             </li>
