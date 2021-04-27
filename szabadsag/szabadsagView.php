@@ -1,4 +1,9 @@
 <?php
+ob_start();
+
+if(!preg_match('/\badminisztrator\b/', $_SESSION['user']))
+    header("Location:index.php");
+
 $sql="select ev from szabadsag group by ev order by ev";
 $stmt=$db->query($sql);
 $strEvek="";

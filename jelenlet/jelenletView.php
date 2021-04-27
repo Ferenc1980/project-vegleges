@@ -1,4 +1,9 @@
 <?php
+ob_start();
+
+if(!preg_match('/\badminisztrator\b/', $_SESSION['user']))
+    header("Location:index.php");
+
 include "szemely.class.php";
 include "myFunctions.php";
 //a select feltöltése a bevezetett honapokkal:

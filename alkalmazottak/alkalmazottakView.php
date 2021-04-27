@@ -1,4 +1,6 @@
 <?php
+
+
 $tbl="";
 	$sql="select * from szemelyek order by nev asc";
     $stmt=$db->query($sql);

@@ -1,5 +1,11 @@
 <?php
 //print_r($_SESSION);
+ob_start();
+
+if(!preg_match('/\badminisztrator\b/', $_SESSION['user']))
+    header("Location:index.php");
+
+
 require_once "config.php";
 $sql="select datum from unnepek order by datum desc";
 $stmt=$db->query($sql);

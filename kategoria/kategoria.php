@@ -1,5 +1,11 @@
 <?php
 
+ob_start();
+
+if(!preg_match('/\badminisztrator\b/', $_SESSION['user']))
+    header("Location:index.php");
+
+
 //require_once "../config.php";
 include __DIR__ . "/../config.php";
 // létrehozunk egy tömböt amiben felsoroljuk mi szerint szeretnénk rendezni a táblázatot

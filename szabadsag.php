@@ -1,4 +1,5 @@
 <?php 
+
 	include "config.php";
 ?>
 <h4 class='page-header'><i class="fa fa-users"></i> Student Details</h4>
