@@ -22,7 +22,7 @@ if(isset($_POST['megjelenit']) && $_POST['honap']!='0'){
     $ho=intval(substr($_POST['honap'],5));
     $fejlec=fejlec2(getDateArr($_POST['honap']));
 
-    $sql="select a.azonosito,a.nev,c.hadrendi,b.perc,b.kateg_kod,b.datum,day(b.datum) nap from szemelyek a,jelenlet b,szabadsag c where a.azonosito=b.sz_azon and a.azonosito=c.sz_azon and c.ev={$ev} and month(datum)={$ho} and year(datum)={$ev} order by a.azonosito";
+    $sql="select a.azonosito,a.nev,c.hadrendi,b.perc,b.kateg_kod,b.datum,day(b.datum) nap from szemelyek a,jelenlet b,szabadsag c where a.azonosito=b.sz_azon and a.azonosito=c.sz_azon and c.ev={$ev} and month(datum)={$ho} and year(datum)={$ev} order by a.azonosito,nap";
     $stmt=$db->query($sql);
     $lepedo=[];
     $id=0;
